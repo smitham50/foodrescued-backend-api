@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  food_id: 1
+  purchased: 2020-09-02
+  posted: 2020-09-02 22:58:13
+  expiry: 2020-09-02
+  weight_in_ounces: 1.5
+
+two:
+  user_id: 1
+  food_id: 1
+  purchased: 2020-09-02
+  posted: 2020-09-02 22:58:13
+  expiry: 2020-09-02
+  weight_in_ounces: 1.5
