@@ -27,6 +27,7 @@ class Api::V1::UsersController < ApplicationController
       :username, 
       :password,
       :address,
+      :city,
       :stateInits,
       :zip
     )
