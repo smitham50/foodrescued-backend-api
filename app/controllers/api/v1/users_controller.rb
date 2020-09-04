@@ -28,6 +28,6 @@ class Api::V1::UsersController < ApplicationController
       :username, 
       :password_digest, 
       :email
-      )
+    )
   end
 end
