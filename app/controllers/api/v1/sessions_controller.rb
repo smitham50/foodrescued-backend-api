@@ -2,11 +2,11 @@ class Api::V1::SessionsController < ApplicationController
   def create
     @user = User.find_by(username: session_params[:username])
   
-    if @user && @user.authenticate(session_params[:password])
+    if @user&.authenticate(session_params[:password])
       login!
       render json: {
         logged_in: true,
-        user: @user.as_json(only: [:id, :username])
+        user: @user.as_json(only: [:username, :authentication_token])
       }
     else
       render json: { 

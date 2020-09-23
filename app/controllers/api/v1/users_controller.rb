@@ -5,8 +5,8 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def create
-    user = User.new(user_params)
-    if user.save
+    @user = User.new(user_params)
+    if @user.save
       login!
       render json: {
         status: :created,
@@ -15,7 +15,7 @@ class Api::V1::UsersController < ApplicationController
     else 
       render json: {
         status: 500,
-        errors: user.errors.full_messages
+        errors: @user.errors.full_messages
       }
     end
   end
