@@ -2,14 +2,13 @@ Rails.application.routes.draw do
   
   namespace :api do
     namespace :v1 do
-      resources :sessions
 
-      post "/signup", to: "users#create"
-      get "/users", to: "users#index"
+      post "/signup" => "users#create"
+      get "/users" => "users#index"
       
-      # get 'sessions/new'
-      # post 'sessions/create'
-      # get 'sessions/login'
+      post '/login', to: 'sessions#create'
+      delete '/logout', to: 'sessions#destroy'
+      get '/logged_in', to: 'sessions#is_logged_in?'
       
     end
   end
