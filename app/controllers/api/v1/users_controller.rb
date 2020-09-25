@@ -10,7 +10,7 @@ class Api::V1::UsersController < ApplicationController
       login!
       render json: {
         status: :created,
-        user: @user.as_json(only: [:username, :authentication_token])
+        user: @user.as_json(only: [:authentication_token])
       }
     else 
       render json: {
