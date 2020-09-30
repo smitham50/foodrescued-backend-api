@@ -6,7 +6,14 @@ class Api::V1::SessionsController < ApplicationController
       login!
       render json: {
         logged_in: true,
-        user: @user.as_json(only: [:authentication_token])
+        user: @user.as_json(only: [
+          :username, 
+          :address,
+          :city,
+          :stateInits,
+          :zip,
+          :authentication_token
+        ])
       }
     else
       render json: { 
