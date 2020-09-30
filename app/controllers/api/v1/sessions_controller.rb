@@ -8,10 +8,8 @@ class Api::V1::SessionsController < ApplicationController
         logged_in: true,
         user: @user.as_json(only: [
           :username, 
-          :address,
-          :city,
-          :stateInits,
-          :zip,
+          :latitude,
+          :longitude,
           :authentication_token
         ])
       }

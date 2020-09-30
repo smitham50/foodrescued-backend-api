@@ -12,10 +12,8 @@ class Api::V1::UsersController < ApplicationController
         status: :created,
         user: @user.as_json(only: [
           :username, 
-          :address,
-          :city,
-          :stateInits,
-          :zip,
+          :latitude,
+          :longitude,
           :authentication_token
           ])
       }
